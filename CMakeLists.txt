@@ -60,16 +60,6 @@ if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/include)
     )
 endif()
 
-# 添加依赖
-ament_target_dependencies(right_wheel_controller
-        controller_interface
-        hardware_interface
-        std_msgs
-        pluginlib
-        rclcpp
-        rclcpp_lifecycle
-        nav_msgs
-)
 ament_target_dependencies(process_node
         rclcpp
         sensor_msgs
@@ -113,12 +103,6 @@ ament_target_dependencies(simple_diff_drive_controller2
 
 install(TARGETS process_node
         DESTINATION lib/${PROJECT_NAME}
-)
-
-install(TARGETS right_wheel_controller
-        ARCHIVE DESTINATION lib
-        LIBRARY DESTINATION lib
-        RUNTIME DESTINATION bin
 )
 
 install(TARGETS simple_diff_drive_controller
