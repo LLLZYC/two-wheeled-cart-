@@ -97,25 +97,6 @@ def generate_launch_description():
     )
 
 
-    # 相机节点（可选，可以根据需要调整命名空间）
-    camera1 = Node(
-        package='yellow_object_detector',
-        executable='contour_pose_node',
-        name='contour_pose_node1',
-        namespace='robot1',
-        output='screen',
-        parameters=[{
-            'physical_width': 0.5,
-            'physical_height': 0.5,
-            'h_min': 20,
-            'h_max': 40,
-            's_min': 100,
-            's_max': 255,
-            'v_min': 100,
-            'v_max': 255
-        }]
-    )
-
     # 事件处理器：依次启动两个机器人
     after_generate_urdf1 = RegisterEventHandler(
         event_handler=OnProcessExit(
