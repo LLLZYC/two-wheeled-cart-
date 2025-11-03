@@ -201,7 +201,7 @@
   </link>
 
   <!-- STEP 4 - 云台偏航关节 (Yaw) -->
-  <joint name="gimbal_yaw_joint" type="revolute">
+  <joint name="gimbal_yaw_joint" type="fixed">
     <origin xyz="0 0 0.04" rpy="0 0 0" />
     <parent link="gimbal_base"/>
     <child link="gimbal_yaw" />
