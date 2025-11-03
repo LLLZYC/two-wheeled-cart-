@@ -27,6 +27,10 @@
     ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r cmd_vel:=/robot1/simple_diff_drive_controller/cmd_vel
     // 键盘控车
     
+    ros2 topic echo /target_pose
+    //追踪的数据
+    
+    
 
     ros2 launch two_wheeled_cart test.launch.py
     //同时加载两量车
