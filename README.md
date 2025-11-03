@@ -26,3 +26,12 @@
 
     ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r cmd_vel:=/robot1/simple_diff_drive_controller/cmd_vel
     // 键盘控车
+    
+
+    ros2 launch two_wheeled_cart test.launch.py
+    //同时加载两量车
+    //存在bug
+     ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r cmd_vel:=/robot2/simple_diff_drive_controller/cmd_vel
+     //控制其中一台
+     ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r cmd_vel:=/robot2/simple_diff_drive_controller2/cmd_vel
+    //另外一台，控制都需要另开终端
